@@ -8,14 +8,21 @@
      "jenga": "https://github.com/npm-opam/jenga",
      "js_of_ocaml": "https://github.com/npm-opam/js_of_ocaml",
      "yojson": "https://github.com/npm-opam/yojson",
-     "ocamlfind": "https://github.com/npm-opam/ocamlfind"
+     "ocamlfind": "https://github.com/npm-opam/ocamlfind",
+     "bookshop": "*",
+     "chenglou": "*",
+     "Universal-cake-type": "*"
   },
   "devDependencies": {
     "jengaboot": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ocaml -version"
+    "start": "ocaml -version",
+    "exec": "eval $(dependencyEnv) && nopam && run",
+    "compile": "eval $(dependencyEnv) && nopam && compile",
+    "query": "eval $(dependencyEnv) && nopam && ocamlfind query",
+    "virtualenv": "export PS1=\"<reason>\\s-\\v\\$ \" && eval $(dependencyEnv) && nopam && bash"
   },
   "repository": {
     "type": "git",

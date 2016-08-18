@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 esc=$(printf '\033')
 refmt -parse re -print ml node_modules/jengaboot/jengaroot.re \
   | sed 's/\[@explicit_arity \]//g' \
