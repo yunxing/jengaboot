@@ -8,16 +8,14 @@
      "jenga": "https://github.com/npm-opam/jenga",
      "js_of_ocaml": "https://github.com/npm-opam/js_of_ocaml",
      "yojson": "https://github.com/npm-opam/yojson",
-     "ocamlfind": "https://github.com/npm-opam/ocamlfind",
-     "bookshop": "*",
-     "chenglou": "*",
-     "Universal-cake-type": "*"
+     "ocamlfind": "https://github.com/npm-opam/ocamlfind"
   },
   "devDependencies": {
     "jengaboot": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "./test.sh && cd node_modules/jengaboot && npm run compileUtils",
     "start": "ocaml -version",
     "exec": "eval $(dependencyEnv) && nopam && run",
     "compile": "eval $(dependencyEnv) && nopam && compile",
